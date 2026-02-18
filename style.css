@@ -1,0 +1,229 @@
+:root {
+    --primaria: #007bff; /* Azul médico */
+    --secundaria: #28a745; /* Verde saúde */
+    --fundo: #f8f9fa;
+    --texto: #2d3436;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+    background: var(--branco);
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.logo span {
+    color: var(--primaria);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primaria);
+}
+
+/* Seção Principal (Hero) */
+main {
+    min-height: 100vh; /* Garante que a seção ocupe a tela toda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px; /* Aumentamos bem o espaço para o menu não cobrir nada */
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+h1 span {
+    color: var(--secundaria);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #636e72;
+}
+
+.btn-principal {
+    background-color: var(--primaria);
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s transform ease;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
+
+    .container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Faz os cards ficarem responsivos sozinhos! */
+    gap: 30px;
+    padding: 80px 10%;
+    background-color: var(--branco);
+}
+
+.card {
+    background: var(--branco);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição suave e elástica */
+    border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+    transform: translateY(-15px); /* O card sobe ao passar o mouse */
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+    border-color: var(--primaria);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--texto);
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* 1. Garante que o Header não ocupe espaço demais */
+header {
+    background: var(--branco);
+    padding: 15px 10%; /* Diminuí um pouco o padding para o menu não ser tão gigante */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 2. RESOLUÇÃO DO CORTE: Adiciona um respiro no topo da seção principal */
+main {
+    min-height: 90vh; /* Ajustado de 80 para 90 para preencher melhor a tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 10% 50px 10%; /* Aumentamos o padding-top para 100px para empurrar o texto para baixo do menu */
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+}
+
+/* 3. Ajuste nos Cards para não ficarem colados */
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 10%; /* Espaço interno para os cards respirarem */
+    margin-top: 20px; /* Garante que a seção de cards não grude no topo */
+}
+
+footer {
+    background-color: #2d3436;
+    color: #dfe6e9;
+    padding: 60px 10% 20px 10%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info, .footer-links, .footer-contato {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-info h3 span {
+    color: var(--primaria);
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #b2bec3;
+    text-decoration: none;
+    transition: 0.3s;
+    line-height: 2;
+}
+
+.footer-links a:hover {
+    color: var(--primaria);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #636e72;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #636e72;
+}
